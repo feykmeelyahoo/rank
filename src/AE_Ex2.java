@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Created by innuendo on 8/2/17.
  */
-public class Ex2 {
+public class AE_Ex2 {
     static int simpleArraySum(int n, int[] ar1) {
         // Complete this function
         int sum = 0;

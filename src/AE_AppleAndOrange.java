@@ -1,10 +1,12 @@
+package Algorithms.Easy;
+
 import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class AppleAndOrange {
+public class AE_AppleAndOrange {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

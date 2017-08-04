@@ -1,3 +1,5 @@
+package Algorithms.Easy;
+
 import java.util.Scanner;
 
 /**
@@ -8,7 +10,7 @@ enum MyDirection {
     RIGHT, LEFT
 }
 
-public class Ex3 {
+public class AE_Ex3 {
     static int diagRightArraySum(int n, int[][] ar) {
         // Complete this function
 

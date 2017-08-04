@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Created by innuendo on 8/2/17.
  */
-public class MinMaxSum {
+public class AE_MinMaxSum {
 
     public static void main(String[] ar1gs) {
         Scanner in = new Scanner(System.in);

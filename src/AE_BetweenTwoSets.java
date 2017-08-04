@@ -4,7 +4,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class BetweenTwoSets {
+public class AE_BetweenTwoSets {
 
     static int getTotalX(int[] a, int[] b) {
 

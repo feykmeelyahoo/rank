@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Created by innuendo on 8/2/17.
  */
-public class PlusMinus {
+public class AE_PlusMinus {
 
     public static void main(String[] ar1gs) {
         Double Pos = 0.0;

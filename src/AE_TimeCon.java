@@ -4,7 +4,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class TimeCon {
+public class AE_TimeCon {
 
     static String timeConversion(String s) {
         // Complete this function

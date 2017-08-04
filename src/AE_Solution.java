@@ -4,22 +4,13 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class BirthdayCakeCandle {
+public class AE_Solution {
 
-    static int birthdayCakeCandles(int n, int[] ar) {
+    static int simpleArraySum(int n, int[] ar) {
         // Complete this function
-        int count = 0;
-        int max = 0;
-
-        for (int i : ar) {
-            if (i > max) {
-                count = 1;
-                max = i;
-            } else if (i == max)
-                count++;
-        }
-
-        return count;
+        System.out.println("ar - " + ar[0]);
+//        simpleArraySum(ar.length()-1,
+        return 0;
     }
 
     public static void main(String[] args) {
@@ -29,7 +20,7 @@ public class BirthdayCakeCandle {
         for (int ar_i = 0; ar_i < n; ar_i++) {
             ar[ar_i] = in.nextInt();
         }
-        int result = birthdayCakeCandles(n, ar);
+        int result = simpleArraySum(n, ar);
         System.out.println(result);
     }
 }

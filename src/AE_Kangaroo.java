@@ -4,7 +4,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Kangaroo {
+public class AE_Kangaroo {
 
     static String kangaroo(int x1, int v1, int x2, int v2) {
         // Complete this function
