@@ -29,42 +29,36 @@ public class AIM_1_Non_Divisible_Subset {
             map.put(tmpKey, tmpList);
         }
 
-        Set<BigDecimal> keySet = map.keySet();
-        List<BigDecimal> keyList = new ArrayList<>();
-        for (BigDecimal key : keySet) {
-            keyList.add(key);
-        }
+        Set<BigDecimal> individables = new HashSet<>();
 
-        Set<BigDecimal> resultSet = findUndividableSet(keyList, divider);
+        boolean ilk = true;
+        BigDecimal sonKey = new BigDecimal(-1);
+
+
+        for (Map.Entry<BigDecimal, List<BigDecimal>> entry : map.entrySet()) {
+            List<BigDecimal> val = entry.getValue();
+            BigDecimal key = entry.getKey();
+
+            if (val.size() > 1) {
+                if (!key.multiply(new BigDecimal(2)).divideAndRemainder(divider)[1].equals(new BigDecimal(0))) {
+                    individables.add(key);
+                }
+            }
+            if (!ilk) {
+                if (!key.add(sonKey).divideAndRemainder(divider)[1].equals(new BigDecimal(0))) {
+                    individables.add(key);
+                    individables.add(sonKey);
+                }
+            } else {
+                ilk = false;
+            }
+            sonKey = key;
+        }
         BigDecimal count = new BigDecimal(0);
-        for (BigDecimal bd : resultSet) {
-            count.add(new BigDecimal(map.get(bd).size()));
+        for (BigDecimal key:individables){
+            count = count.add(new BigDecimal(map.get(key).size()));
         }
 
         System.out.println(count);
-    }
-
-    public static Set<BigDecimal> findUndividableSet(List<BigDecimal> list, BigDecimal divider) {
-        Set<BigDecimal> dividableSet = new HashSet<>();
-        Set<BigDecimal> unDividableSet = new HashSet<>();
-        for (int i = 0; i < list.size() - 1; i++) {
-            for (int j = i + 1; j < list.size(); j++) {
-                if (!(list.get(i).add(list.get(j)).divideAndRemainder(divider).equals(new BigDecimal(0)))) {
-                    unDividableSet.add(new BigDecimal(i));
-                    unDividableSet.add(new BigDecimal(j));
-                } else {
-                    dividableSet.add(new BigDecimal(i));
-                    dividableSet.add(new BigDecimal(j));
-                }
-            }
-        }
-        for (BigDecimal bd : list) {
-            if (!dividableSet.contains(bd)) {
-                unDividableSet.add(bd);
-            }
-        }
-
-        return unDividableSet;
-
     }
 }
